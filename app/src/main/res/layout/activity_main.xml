@@ -27,17 +27,19 @@
 
 
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/imgKey"
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
+                android:adjustViewBounds="true"
                 app:srcCompat="@android:drawable/ic_menu_gallery"
                 />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/openKey"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/btnOpenKey" />
+                android:text="@string/btnOpenKey"
+                android:onClick="openKeyImage"/>
         </LinearLayout>
 
         <LinearLayout
@@ -53,21 +55,23 @@
                 android:gravity="center_horizontal"/>
 
             <ImageView
-                android:id="@+id/imageView5"
+                android:id="@+id/imgEncrypt"
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
+                android:adjustViewBounds="true"
                 app:srcCompat="@android:drawable/ic_menu_gallery" />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/openFile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="openInputImage"
                 android:text="@string/textOpenFile" />
         </LinearLayout>
     </LinearLayout>
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/textToEncrypt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -81,14 +85,14 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/btnDecipher"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/textDecypher" />
+            android:text="@string/textDecipher" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/btnEncrypt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

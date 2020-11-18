@@ -5,6 +5,6 @@
     <string name="textEncrypted">ENCRYPTED</string>
     <string name="textOpenFile">OPEN FILE</string>
     <string name="edtTextToEncrypt">Text to encrypt</string>
-    <string name="textDecypher">DECYPHER</string>
+    <string name="textDecipher">DECIPHER</string>
     <string name="textEncrypt">ENCRYPT</string>
 </resources>
