@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Words2Picture</string>
+    <string name="textKey">KEY</string>
+    <string name="btnOpenKey">OPEN KEY</string>
+    <string name="textEncrypted">ENCRYPTED</string>
+    <string name="textOpenFile">OPEN FILE</string>
+    <string name="edtTextToEncrypt">Text to encrypt</string>
+    <string name="textDecypher">DECYPHER</string>
+    <string name="textEncrypt">ENCRYPT</string>
+</resources>
