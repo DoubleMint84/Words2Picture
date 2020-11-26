@@ -1,10 +1,13 @@
 <resources>
     <string name="app_name">Words2Picture</string>
-    <string name="textKey">KEY</string>
-    <string name="btnOpenKey">OPEN KEY</string>
+    <string name="textImage">Your image</string>
+    <string name="btnOpenImage">OPEN IMAGE</string>
     <string name="textEncrypted">ENCRYPTED</string>
     <string name="textOpenFile">OPEN FILE</string>
     <string name="edtTextToEncrypt">Text to encrypt</string>
     <string name="textDecipher">DECIPHER</string>
     <string name="textEncrypt">ENCRYPT</string>
+    <string name="txtSave">Save</string>
+    <string name="passHint">Password</string>
+    <string name="txtCopy">Copy</string>
 </resources>
