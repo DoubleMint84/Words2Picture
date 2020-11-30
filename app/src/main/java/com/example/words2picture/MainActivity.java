@@ -95,12 +95,18 @@ public class MainActivity extends AppCompatActivity implements EncoderCallback, 
         }
     }
     public void encryptCall(View view) {
-        callType = 1;
-        Steganography steganography = new Steganography(editText.getText().toString(),
-                passText.getText().toString(),
-                bitImage);
-        Encoder encoder = new Encoder(this, this);
-        encoder.execute(steganography);
+        if (editText.getText().toString() == "" || bitImage == null || passText.getText().toString() == "") {
+            Toast toast = Toast.makeText(getApplicationContext(), "Please, load image and fill all fields", Toast.LENGTH_LONG);
+            toast.show();
+        } else {
+            callType = 1;
+            Steganography steganography = new Steganography(editText.getText().toString(),
+                    passText.getText().toString(),
+                    bitImage);
+            Encoder encoder = new Encoder(this, this);
+            encoder.execute(steganography);
+
+        }
     }
 
     @Override
@@ -126,7 +132,7 @@ public class MainActivity extends AppCompatActivity implements EncoderCallback, 
                 }else{
 
                     if (!result.isSecretKeyWrong()){
-                        Toast toast = Toast.makeText(getApplicationContext(), "Image decoded", Toast.LENGTH_SHORT);
+                        Toast toast = Toast.makeText(getApplicationContext(), "Image decoded successfully", Toast.LENGTH_SHORT);
                         toast.show();
                         editText.setText(result.getMessage());
                     }
@@ -178,6 +184,7 @@ public class MainActivity extends AppCompatActivity implements EncoderCallback, 
             bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, fOut);
             fOut.flush();
             fOut.close();
+            sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.fromFile(file)));
             debug.post(new Runnable() {
                 @Override
                 public void run() {
